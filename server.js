@@ -36,7 +36,7 @@ app.get('/callback', function (req, res) {
   }
   request.post(authOptions, function (error, response, body) {
     var access_token = body.access_token
-    let uri = process.env.FRONTEND_URI || 'https://spotify-mosaic.now.sh/'
+    let uri = process.env.FRONTEND_URI || 'https://localhost:3000/'
     res.redirect(uri + '?access_token=' + access_token)
   })
 })
